@@ -1,0 +1,43 @@
+int T[20][20];
+ int L, C;
+ int I, J;
+ long SOM;
+ float moy ;
+
+
+ printf("Nombre de lignes   (max.20) : ");
+ scanf("%d", &L );
+ printf("Nombre de colonnes (max.20) : ");
+ scanf("%d", &C );
+ for (I=0; I<L; I++)
+    for (J=0; J<C; J++)
+        {
+         printf("Elément[%d][%d] : ",I,J);
+         scanf("%d", &T[I][J]);
+        }
+
+ printf("Tableau donné :\n");
+ for (I=0; I<L; I++)
+    {
+     for (J=0; J<C; J++)
+          printf("%d", T[I][J]);
+     printf("\n");
+    }
+
+ for (I=0; I<L; I++)
+     {
+      for (SOM=0, J=0; J<C; J++)
+             SOM += T[I][J];
+      printf("Somme  : %ld\n",SOM);
+     }
+
+ for (J=0; J<C; J++)
+     {
+      for (SOM=0, I=0; I<L; I++)
+             SOM += T[I][J];
+      printf("Somme : %ld\n"5,SOM);
+     }
+      moy=SOM/L;
+      moy=SOM/C;
+ printf ("   le moy =%f", moy);
+}

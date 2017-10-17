@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+
+{
+    float moy;
+    const int j= 5;
+    int t[j];
+     int n,i;
+      float tot=0;
+      printf("Dimension du tableau   ");
+       scanf("%d", &n );
+    for (i=0; i<n ; i++)
+    {
+         printf("%d", t[i]);
+         scanf ("%d", &t[i]);
+         tot=tot+t[i];
+    }
+    moy= tot/n;
+    printf("moyenne=%f", moy );
+
+    return 0;
+}

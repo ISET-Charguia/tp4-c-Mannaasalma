@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <stdio.h>
+main()
+{
+ const int k =30;
+ int T[k], TPOS[k], TNEG[k];
+ int N,     NPOS,     NNEG;
+ int I;
+
+ printf("Dimension du tableau   ");
+ scanf("%d", &N );
+ for (I=0; I<N; I++)
+    {
+     printf("Elément %d : ", I);
+     scanf("%d", &T[I]);
+    }
+
+ printf("Tableau donné :\n");
+ for (I=0; I<N; I++)
+     printf("%d ", T[I]);
+ printf("\n");
+
+ NPOS=0;
+ NNEG=0;
+
+ for (I=0; I<N; I++)
+      { if (T[I]>0) {
+                     TPOS[NPOS]=T[I];
+                     NPOS++;
+                    }
+        if (T[I]<0) {
+                     TNEG[NNEG]=T[I];
+                     NNEG++;
+                    }
+      }
+
+ printf("Tableau TPOS :\n");
+ for (I=0; I<NPOS; I++)
+     printf("%d ", TPOS[I]);
+ printf("\n");
+ printf("Tableau TNEG :\n");
+ for (I=0; I<NNEG; I++)
+     printf("%d ", TNEG[I]);
+ printf("\n");
+ return 0;
+}
